@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Block : MonoBehaviour
+public class InvincibilityBonus : MonoBehaviour
 {
     float screenHalfHeightInWorldUnits;
     float screenLimitBottom;
     float halfBlockHeight;
 
-    public Vector2 speedRange = new Vector2(7f, 10f);
-    float speed;
+    float speed = 7;
 
-    void Start()
+    private void Start()
     {
-        speed = Mathf.Lerp(speedRange.x, speedRange.y, Difficulty.GetDifficultyPercent());
         screenHalfHeightInWorldUnits = Camera.main.orthographicSize;
         halfBlockHeight = transform.localScale.y / 2f;
         screenLimitBottom = -screenHalfHeightInWorldUnits - halfBlockHeight;
@@ -24,7 +22,7 @@ public class Block : MonoBehaviour
         transform.Translate(Vector3.down * speed * Time.deltaTime, Space.Self);
 
         // Delete block once it's out of the screen
-        if(transform.position.y < screenLimitBottom)
+        if (transform.position.y < screenLimitBottom)
         {
             Destroy(gameObject);
         }

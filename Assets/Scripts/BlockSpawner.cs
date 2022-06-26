@@ -7,13 +7,12 @@ public class BlockSpawner : MonoBehaviour
     public GameObject blockPrefab;
     public int blockSpeed = 5;
 
-    public Vector2 SpawnIntervalRange;
-    float InstantiationTimer;
+    public Vector2 spawnIntervalRange = new Vector2(0.3f, 0.8f);
+    float instantiationTimer;
 
     float screenHalfWidthInWorldUnits;
     float screenHalfHeightInWorldUnits;
-    float halfBlockWidth;
-    float BlockHeight;
+    float blockHeight;
 
     float blockSizeMin = 0.3f;
     float blockSizeMax = 1.8f;
@@ -21,21 +20,19 @@ public class BlockSpawner : MonoBehaviour
     float blockAngleMin = -15f;
     float blockAngleMax = 15f;
 
-    // Start is called before the first frame update
     void Start()
     {
         screenHalfWidthInWorldUnits = Camera.main.aspect * Camera.main.orthographicSize;
         screenHalfHeightInWorldUnits = Camera.main.orthographicSize;
-        BlockHeight = blockPrefab.transform.localScale.y;
+        blockHeight = blockPrefab.transform.localScale.y;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        InstantiationTimer -= Time.deltaTime;
-        if (InstantiationTimer <= 0)
+        instantiationTimer -= Time.deltaTime;
+        if (instantiationTimer <= 0)
         {
-            InstantiationTimer += Mathf.Lerp(SpawnIntervalRange.y, SpawnIntervalRange.x, Difficulty.GetDifficultyPercent());
+            instantiationTimer += Mathf.Lerp(spawnIntervalRange.y, spawnIntervalRange.x, Difficulty.GetDifficultyPercent());
             SpawnBlock();
         }
     }
@@ -43,10 +40,10 @@ public class BlockSpawner : MonoBehaviour
     void SpawnBlock()
     {
         // Randomize starting position
-        float minX = -screenHalfWidthInWorldUnits - halfBlockWidth;
-        float maxX = screenHalfWidthInWorldUnits + halfBlockWidth;
+        float minX = -screenHalfWidthInWorldUnits;
+        float maxX = screenHalfWidthInWorldUnits;
         float randomX = Random.Range(minX, maxX);
-        float y = screenHalfHeightInWorldUnits + BlockHeight;
+        float y = screenHalfHeightInWorldUnits + blockHeight;
 
         // Randomize angle
         float blockAngle = Random.Range(blockAngleMin, blockAngleMax);

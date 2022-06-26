@@ -3,7 +3,7 @@ using UnityEngine;
 
 public static class Difficulty
 {
-    static float secondsToMaxDifficulty = 60f;
+    static float secondsToMaxDifficulty = 30f;
 
     public static float GetDifficultyPercent()
     {
