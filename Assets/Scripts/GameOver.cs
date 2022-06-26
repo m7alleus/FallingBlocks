@@ -23,7 +23,7 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameOver)
+        if (gameOver)
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
