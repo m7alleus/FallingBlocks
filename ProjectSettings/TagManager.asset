@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Block
   - InvincibilityBonus
+  - MenuMusic
+  - GameMusic
   layers:
   - Default
   - TransparentFX
