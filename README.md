@@ -1,10 +1,27 @@
 # FallingBlocks
 
-A simple yet challenging game where you must avoid falling blocks:
-![gamepng](https://user-images.githubusercontent.com/1298507/175956206-4073d1c8-12d7-47c6-a1ca-0bc32dce10f1.png)
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/1298507/175956854-49396693-af7a-45a6-999d-2415fe37c12f.png" alt="screenshot-game"/>
+   <br/>
+   A simple yet challenging game where you must avoid falling blocks
+</p>
 
-Gain temporary invincibility by catching the yellow bonus:
-![invincibility-bonuspng](https://user-images.githubusercontent.com/1298507/175956221-6b8ec842-2a66-4fd1-829e-e9d226a6b41b.png)
+<br/>
+<br/>
 
-Save your personnal time and tease your friends (or not):
-![gameover](https://user-images.githubusercontent.com/1298507/175956225-33525269-5353-4308-894e-6ed278509632.png)
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/1298507/175956872-31284a0a-c4cc-4ca7-b5a5-478c0a4a9194.png" alt="screenshot-bonus"/>
+   <br/>
+   Gain temporary invincibility by catching the yellow bonus
+</p>
+
+<br/>
+<br/>
+
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/1298507/175956888-b1d42284-181c-42d9-8d7d-6c6e7b1bdf48.png" alt="screenshot-gameover"/>
+   <br/>
+   Save your personnal time and tease your friends
+   <br/>
+   (or not, who cares about this stupid game and its stupid difficulty?)
+</p>
