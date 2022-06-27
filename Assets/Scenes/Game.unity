@@ -596,8 +596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  invincibility: 1
-  invincibilityTimer: 300
+  invincibility: 0
+  invincibilityTimer: 3
 --- !u!212 &467569994
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1544,6 +1544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 1801574088}
   secondsSurvivedUI: {fileID: 856174443}
+  secondsSurvived: 0
 --- !u!4 &1915556648
 Transform:
   m_ObjectHideFlags: 0
