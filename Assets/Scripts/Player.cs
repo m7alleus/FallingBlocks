@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -13,12 +11,10 @@ public class Player : MonoBehaviour
 
     float screenHalfWidthInWorldUnits;
     Vector3 velocity;
-    SpriteRenderer sprite;
 
     void Start()
     {
         invincibilityInterval = invincibilityTimer;
-        sprite = GetComponent<SpriteRenderer>();
         screenHalfWidthInWorldUnits = Camera.main.aspect * Camera.main.orthographicSize;
         GameObject invincibilityCircle = GameObject.Find("InvincibilityCircle");
         invCircleScale = invincibilityCircle.transform.localScale;
@@ -72,6 +68,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // TODO: refactor invincibility logic in another script
     Vector3 invCircleScale;
 
     private void HandleInvincibilityState()
@@ -96,7 +93,6 @@ public class Player : MonoBehaviour
         {
             // hide circle
             invincibilityCircle.GetComponent<Renderer>().enabled = false;
-            //invincibilityCircle.transform.localScale = 1;
         }
     }
 }

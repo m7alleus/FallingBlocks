@@ -7,7 +7,6 @@ public class InvincibilityBonus : MonoBehaviour
     float screenHalfHeightInWorldUnits;
     float screenLimitBottom;
     float halfBlockHeight;
-
     float speed = 7;
 
     private void Start()

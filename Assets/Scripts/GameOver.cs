@@ -8,11 +8,10 @@ public class GameOver : MonoBehaviour
 {
 
     public GameObject gameOverScreen;
-    public Text secondsSurvivedUI;
-    bool gameOver;
-
     public float secondsSurvived;
-
+    public Text secondsSurvivedUI;
+    
+    bool gameOver;
     void Start()
     {
         FindObjectOfType<Player>().OnPlayerDeath += OnGameOver;

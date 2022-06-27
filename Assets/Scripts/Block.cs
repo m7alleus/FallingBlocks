@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+    public Vector2 speedRange = new Vector2(7f, 10f);
+
     float screenHalfHeightInWorldUnits;
     float screenLimitBottom;
     float halfBlockHeight;
-
-    public Vector2 speedRange = new Vector2(7f, 10f);
     float speed;
 
     void Start()
